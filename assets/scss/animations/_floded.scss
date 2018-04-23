@@ -1,0 +1,656 @@
+// ======================
+//   FLOODED ENVIRONMENT
+// ======================
+
+
+
+
+// INDEX 
+// ======================
+
+// section (line number)
+
+// 1. VARIABLES (19)
+// 2. CONNECTIONS (26)
+// 3. STYLES (40)
+
+
+
+//    VARIABLES
+// ======================
+
+$flooded__progress-bar-progress-length: 1540.47998046875;
+
+
+
+//    CONNECTIONS
+// ======================
+
+// ______________________  Set up for paths ______________________
+
+.flooded__progress-bar-progress {
+    @include line-draw-setup-long($flooded__progress-bar-progress-length, progress-movet)
+}
+    @include progress-drawt(progress-movet, (-$flooded__progress-bar-progress-length));
+
+
+
+
+
+//    STYLES - ANIMATION: duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name
+// ======================
+
+// ______________________ BUTTON AND POINTER ______________________
+
+#flooded__pointer {
+  animation: $scene-one-duration ease-in-out 19.5s alternate forwards flooded-pointer;
+   opacity: 0;
+}
+
+@keyframes flooded-pointer {
+  0% {
+    opacity: 0;
+  }
+
+  96% {
+    opacity: 0;
+  }
+
+  98% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+#flooded__pointer-arrow {
+  animation: 4s ease-in-out 19.5s infinite forwards arrow-pointer;
+}
+
+ @keyframes arrow-pointer {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate3d(1%, 1%, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(1%, 1%, 0);
+  }  
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+#flooded__go-to-healthy {
+  animation: $scene-one-duration ease-in-out 19.5s alternate forwards button-next;
+  opacity: 0;
+}
+
+@keyframes button-next {
+  0% {
+    opacity: 0;
+  }
+
+  97% {
+    opacity: 0;
+  }
+
+  99% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+#flooded__button-live-river {
+  animation: $scene-one-duration ease-in-out 15s alternate forwards button-live;
+  opacity: 0;
+}
+
+#flooded__button-live-woods {
+  animation: $scene-one-duration ease-in-out 20s alternate forwards button-live;
+  opacity: 0;
+}
+
+#flooded__button-live-woods:hover, #flooded__button-live-river:hover, #town-flooded__text-show-all {
+  transform: translate3d(0, -0.5%, 0);
+}
+
+@keyframes button-live {
+  0% {
+    opacity: 0;
+  }
+
+  94% {
+    opacity: 0;
+  }
+
+  96% {
+    opacity: 1;
+    transform: translate3d(0, -2%, 0);
+  }
+
+  97% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  98% {
+    transform: translate3d(0, -1%, 0);
+  }
+
+  99% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+ #town-flooded__text-show-all {
+  animation: $scene-one-duration ease-in-out 20s alternate forwards button-allt;
+  opacity: 0;
+}
+
+@keyframes button-allt {
+  0% {
+    opacity: 0;
+  }
+
+  94% {
+    opacity: 0;
+  }
+
+  96% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+#flooded__pointer-live {
+  animation: $scene-one-duration ease-in-out 20s alternate forwards pointer-live;
+  opacity: 0;
+}
+
+@keyframes pointer-live {
+  0% {
+    opacity: 0;
+  }
+
+  89% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  98% {
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 0; 
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#flooded__pointer-live-arrow {
+  animation: 4s ease-in-out 0s infinite forwards p-livear;
+}
+
+@keyframes p-livear {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate3d(1%, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(1%, 0, 0);
+  }  
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+// ______________________ TEXTS AND ICONS ______________________
+
+#flooded__text-one {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards flood-text;
+}
+
+@keyframes flood-text {
+  0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 0;
+  }
+
+  4% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+#flooded__text-two-a {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards flood-texttwo;
+  opacity: 0;
+}
+
+@keyframes flood-texttwo {
+  0% {
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 0;
+  }
+
+  14% {
+    opacity: 1;
+  }
+
+  36% {
+    opacity: 1;
+  }
+
+  38% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#flooded__text-two-b {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards flood-texttwob;
+  opacity: 0;
+}
+
+@keyframes flood-texttwob {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  32% {
+    opacity: 1;
+  }
+
+  36% {
+    opacity: 1;
+  }
+
+  38% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#flooded__text-three {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards flood-textthree;
+  opacity: 0;
+}
+
+@keyframes flood-textthree {
+  0% {
+    opacity: 0;
+  }
+
+  38% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  54% {
+    opacity: 1;
+  }
+
+  56% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+#flooded__text-four {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards flood-textfour;
+  opacity: 0;
+}
+
+@keyframes flood-textfour {
+  0% {
+    opacity: 0;
+  }
+
+  56% {
+    opacity: 0;
+  }
+
+  58% {
+    opacity: 1;
+  }
+
+  64% {
+    opacity: 1;
+  }
+
+  66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#flooded__text-five {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards flood-textfive;
+  opacity: 0;
+}
+
+@keyframes flood-textfive {
+  0% {
+    opacity: 0;
+  }
+
+  66% {
+    opacity: 0;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  82% {
+    opacity: 1;
+  }
+
+  84% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+#flooded__icon-one {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards one-icon;
+  opacity: 0;
+}
+
+@keyframes one-icon {
+  0% {
+    opacity: 0;
+  }
+
+  68% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  82% {
+    opacity: 1;
+  }
+
+  84% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#flooded__icon-one-cross {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards oneicon-cross;
+  opacity: 0;
+}
+
+@keyframes oneicon-cross {
+  0% {
+    opacity: 0;
+  }
+
+  76% {
+    opacity: 0;
+  }
+
+  78% {
+    opacity: 1;
+  }
+
+  82% {
+    opacity: 1;
+  }
+
+  84% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+#flooded__text-six {
+  animation: 76s ease-in-out 0s alternate forwards flood-textsix;
+  opacity: 0;
+}
+
+@keyframes flood-textsix {
+  0% {
+    opacity: 0;
+  }
+
+  66% {
+    opacity: 0;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  82% {
+    opacity: 1;
+  }
+
+  84% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#flooded__icon-two {
+  animation: 76s ease-in-out 0s alternate forwards icon-two;
+  opacity: 0;
+}
+
+@keyframes icon-two {
+  0% {
+    opacity: 0;
+  }
+
+  68% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  82% {
+    opacity: 1;
+  }
+
+  84% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#flooded__icon-two-cross {
+  animation: 76s ease-in-out 0s alternate forwards icon-twocross;
+  opacity: 0;
+}
+
+@keyframes icon-twocross {
+  0% {
+    opacity: 0;
+  }
+
+  76% {
+    opacity: 0;
+  }
+
+  78% {
+    opacity: 1;
+  }
+
+  82% {
+    opacity: 1;
+  }
+
+  84% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+#flooded__text-seven {
+  animation: $scene-one-duration ease-in-out 18s alternate forwards flood-textseven;
+  opacity: 0;
+}
+
+@keyframes flood-textseven {
+  0% {
+    opacity: 0;
+  }
+
+  76% {
+    opacity: 0;
+  }
+
+  78% {
+    opacity: 1;
+  }
+
+  96% {
+    opacity: 1;
+  }
+
+  98% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+#flooded__icon-three {
+  animation: $scene-one-duration ease-in-out 18s alternate forwards icon-three;
+  opacity: 0;
+}
+
+@keyframes icon-three {
+  0% {
+    opacity: 0;
+  }
+
+  78% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  96% {
+    opacity: 1;
+  }
+
+  98% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

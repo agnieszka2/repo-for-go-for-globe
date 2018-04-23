@@ -1,0 +1,2544 @@
+// ======================
+//   TOWN
+// ======================
+
+
+
+
+// INDEX 
+// ======================
+
+// section (line number)
+
+// 1. SCENE 2 SETUP (40)
+// 2. PROGRESS BAR (53)
+// 3. RETURN BUTTONS (161)
+// 4. CLOUDS (169)
+// 5. SCENE 2 TEXTS (313)
+// 6. CITY BUTTON (655)
+// 7. FARM BUTTON (729)
+// 8. FARM TEXTS (803)
+// 9. WOODS BUTTON (1039)
+// 10. WOODS TEXTS (1102)
+// 11. QUESTIONNAIRE BUTTON (1314)
+// 12. TOWN TEXTS (1378)
+// 13. FARM COWS (1527)
+// 14. FARM CAR (1829)
+// 15. FACTORIES (1872)
+// 16. TRAFFIC (2109)
+// 17. CAR PARK (2236)
+// 18. PLANE (2292)
+// 19. BIRDS (2398)
+// 20. FLOOD (2538)
+// 21. DEAD TREES (2546)
+
+
+
+//    STYLES - ANIMATION: duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name
+// ======================
+
+// ______________________ SCENE 2 SETUP ______________________
+
+#town__zoom-farm-cow, #town__know-farm, #town__know-woods, #town__know-town, #town__farm-all, #town__woods-all, #town__city-all, #town__zoomout-farm-cow, #town__zoom-farm-cow-two {
+  display: none;
+}
+
+#town__know-farm:hover, #town__know-woods:hover, #town__know-town:hover,#town__know-two:hover,
+#town__farm-all:hover, #town__woods-all:hover, #town__city-all:hover, #town__scene-all:hover {
+  transform: translate3d(0, -0.5%, 0);
+}
+
+
+
+// ______________________ PROGRESS BAR ______________________
+
+#town__progress {
+  transform: translate3d(0, -18px, 0);
+}
+
+#town__progress:hover {
+  transform: translate3d(0, 0, 0);
+}
+
+#town__progress-checkpoint {
+  display: none;
+}
+
+#town__progress:hover #town__progress-checkpoint {
+  display: block;
+}
+
+@keyframes progress-bar {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 18px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+#town__hover-trigger {
+  opacity: 0;
+}
+
+@keyframes hover-bar {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+   opacity: 0;
+  }
+}
+
+
+#town__progress-bar-progress-four {
+  animation: 2s ease-in-out 0s alternate paused progress-four;
+}
+
+@keyframes progress-four {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#town__progress-bar-progress-three {
+  animation: 2s ease-in-out 0s alternate paused progress-three;
+}
+
+@keyframes progress-three {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#town__progress-bar-progress-two {
+  animation: 2s ease-in-out 0s alternate paused progress-two;
+}
+
+@keyframes progress-two {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#town__progress-bar-progress-one {
+  animation: 2s ease-in-out 0s alternate paused progress-one;
+}
+
+@keyframes progress-one {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+// ______________________ RETURN BUTTONS ______________________
+
+#town__return-woods, #town__return-city, #town__return-farm {
+  display: none;
+}
+
+
+
+// ______________________ CLOUDS ______________________
+
+#town__cloud-one {
+  animation: 130s ease-in-out 0s infinite forwards cloud-one;
+  opacity: 0;
+}
+
+@keyframes cloud-one {
+  0% {
+    opacity: 0;
+  }
+
+  35% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  70% {
+   transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(200px, 0, 0);
+  }
+}
+
+
+#town__cloud-two {
+  animation: 130s ease-in-out 0s infinite forwards cloud-two;
+  opacity: 0;
+}
+
+@keyframes cloud-two {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  55% {
+    opacity: 1;
+  }
+
+  70% {
+   transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(200px, 0, 0);
+  }
+}
+
+
+#town__cloud-three {
+  animation: 130s ease-in-out 0s infinite forwards cloud-three;
+  opacity: 0;
+}
+
+@keyframes cloud-three {
+  0% {
+    opacity: 0;
+  }
+
+  65% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  70% {
+   transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(200px, 0, 0);
+  }
+}
+
+#town__cloud-four {
+  animation: 130s ease-in-out 0s infinite forwards cloud-four;
+  opacity: 0;
+}
+
+@keyframes cloud-four {
+  0% {
+    opacity: 0;
+  }
+
+  65% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  70% {
+   transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(200px, 0, 0);
+  }
+}
+
+#town__cloud-five {
+  animation: 130s ease-in-out 0s infinite forwards cloud-five;
+  opacity: 0;
+}
+
+@keyframes cloud-five {
+  0% {
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  70% {
+   transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(200px, 0, 0);
+  }
+}
+
+
+// ______________________ SCENE 2 TEXTS ______________________
+
+#town__text-scene-one {
+  animation: $scene-one-duration ease-in-out 10s alternate forwards scene-textone;
+  opacity: 0;
+}
+
+@keyframes scene-textone {
+  0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 0;
+  }
+
+  4% {
+    opacity: 1;
+  }
+
+  14% {
+    opacity: 1;
+  }
+
+  16% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#town__text-scene-two {
+  animation: $scene-one-duration ease-in-out 10s alternate forwards scene-texttwo;
+  opacity: 0;
+}
+
+@keyframes scene-texttwo {
+  0% {
+    opacity: 0;
+  }
+
+  16% {
+    opacity: 0;
+  }
+
+  18% {
+    opacity: 1;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#town__text-scene-three {
+  animation: $scene-one-duration ease-in-out 10s alternate forwards scene-textthree;
+  opacity: 0;
+}
+
+@keyframes scene-textthree {
+  0% {
+    opacity: 0;
+  }
+
+  26% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#town__pointer {
+  animation: $scene-one-duration ease-in-out 10s alternate forwards pointer-one;
+  opacity: 0;
+}
+
+@keyframes pointer-one {
+  0% {
+    opacity: 0;
+  }
+
+  44% {
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  49% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#town__pointer-arrow {
+  animation: $scene-one-duration ease-in-out 10s alternate forwards arrow-one;
+}
+
+@keyframes arrow-one {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  44% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  45% {
+    transform: translate3d(1%, -1%, 0);
+  }
+
+  46% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  47% {
+    transform: translate3d(1%, -1%, 0);
+  }  
+
+  48% {
+    transform: translate3d(0, 0, 0);
+  }  
+
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#town__scene-all {
+  animation: $scene-one-duration ease-in-out 10s alternate forwards scene-all;
+  opacity: 0;
+}
+
+@keyframes scene-all {
+  0% {
+    opacity: 0;
+  }
+
+  43% {
+    opacity: 0;
+  }
+
+  44% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+ #town__pointer-one {
+  animation: 9s ease-in-out 0s alternate paused pointer-two;
+  opacity: 0;
+ }
+
+ @keyframes pointer-two {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+#town__pointer-one-arrow {
+  animation: 3s ease-in-out 0s alternate paused arrow-two;
+}
+
+@keyframes arrow-two {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate3d(0, -1%, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -1%, 0);
+  }  
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+ #town__pointer-two,  #town__pointer-woods,  #town__pointer-farm {
+  animation: 6s ease-in-out 0s alternate paused pointer-three;
+  opacity: 0;
+ }
+
+ @keyframes pointer-three {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+#town__pointer-two-arrow {
+  animation: 4s ease-in-out 0s alternate paused arrow-three;
+}
+
+@keyframes arrow-three {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate3d(-1%, 1%, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(-1%, 1%, 0);
+  }  
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+#town__pointer-arrow-farm {
+  animation: 4s ease-in-out 8s alternate paused arrow-farm;
+}
+
+@keyframes arrow-farm {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate3d(0, -1%, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -1%, 0);
+  }  
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+#town__pointer-arrow-woods {
+  animation: 4s ease-in-out 0s alternate paused arrow-woods;
+}
+
+@keyframes arrow-woods {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate3d(1%, 1%, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(1%, 1%, 0);
+  }  
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+
+// ______________________ CITY BUTTON ______________________
+
+#town__path-to-town-one {
+  animation: $scene-one-duration ease-in-out 10s alternate forwards town-path;
+  opacity: 0;
+}
+
+#town__path-to-town-two {
+  animation: $scene-one-duration ease-in-out 10.5s alternate forwards town-path;
+  opacity: 0;
+}
+
+#town__path-to-town-three {
+  animation: $scene-one-duration ease-in-out 11s alternate forwards town-path;
+  opacity: 0;
+}
+
+#town__path-to-town-four {
+  animation: $scene-one-duration ease-in-out 11.5s alternate forwards town-path;
+  opacity: 0;
+}
+
+
+@keyframes town-path {
+
+  0% {
+    opacity: 0;
+  }
+
+  51% {
+   opacity: 0;
+  }
+
+  52% {
+    opacity: 1;
+  }
+
+  53% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+
+#town__zoom-town {
+  animation: $scene-one-duration ease-in-out 10s alternate forwards button-city;
+  opacity: 0;
+}
+
+
+@keyframes button-city {
+
+  0% {
+    opacity: 0;
+  }
+
+  54% {
+    opacity: 0;
+  }
+
+  56% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+// ______________________ FARM BUTTON ______________________
+
+#town__path-to-farm-one {
+  animation: 1s ease-in-out 0s alternate paused farm-path;
+  opacity: 0;
+}
+
+#town__path-to-farm-two {
+  animation: 1s ease-in-out 0.5s alternate paused farm-path;
+  opacity: 0;
+}
+
+#town__path-to-farm-three {
+  animation: 1s ease-in-out 1s alternate paused farm-path;
+  opacity: 0;
+}
+
+#town__path-to-farm-four {
+  animation: 1s ease-in-out 1.5s alternate paused farm-path;
+  opacity: 0;
+}
+
+#town__path-to-farm-five {
+  animation: 1s ease-in-out 1s alternate paused farm-path;
+  opacity: 0;
+}
+
+#town__path-to-farm-six {
+  animation: 1s ease-in-out 1.5s alternate paused farm-path;
+  opacity: 0;
+}
+
+
+@keyframes farm-path {
+
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+
+#town__zoom-farm {
+  animation: $scene-one-duration ease-in-out 9s alternate paused button-farm;
+  opacity: 0;
+}
+
+@keyframes button-farm {
+
+  0% {
+    opacity: 0;
+  }
+
+  6% {
+    opacity: 0;
+  }
+
+  7% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// ______________________ FARM TEXTS ______________________
+
+#town__text-farm-one {
+  animation: $scene-one-duration ease-in-out 0s alternate paused farm-textone;
+}
+
+@keyframes farm-textone {
+  0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 0;
+  }
+
+  4% {
+    opacity: 1;
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#cow-zoom-element {
+  animation: $scene-one-duration ease-in-out 0s alternate paused cow-zoom;
+}
+
+@keyframes cow-zoom {
+  0% {
+    opacity: 0;
+  }
+
+  44% {
+    opacity: 0;
+  }
+
+  46% {
+    opacity: 1;
+    transform: translate3d(0, -2%, 0);
+  }
+
+  47% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  48% {
+    opacity: 1;
+    transform: translate3d(0, -1%, 0);
+  }
+
+  49% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#town__text-farm-two {
+  animation: $scene-one-duration ease-in-out 0s alternate paused farm-texttwo;
+}
+
+@keyframes farm-texttwo {
+  0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 0;
+  }
+
+  4% {
+    opacity: 1;
+  }
+
+  14% {
+    opacity: 1;
+  }
+
+  16% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#town__text-farm-three {
+  animation: $scene-one-duration ease-in-out 0s alternate paused farm-textthree;
+}
+
+@keyframes farm-textthree {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  22% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+#town__text-farm-four {
+  animation: $scene-one-duration ease-in-out 0s alternate paused farm-textfour;
+}
+
+@keyframes farm-textfour {
+  0% {
+    opacity: 0;
+  }
+
+  22% {
+    opacity: 0;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  32% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+#town__text-farm-five {
+  animation: $scene-one-duration ease-in-out 0s alternate paused farm-textfive;
+}
+
+@keyframes farm-textfive {
+  0% {
+    opacity: 0;
+  }
+
+  32% {
+    opacity: 0;
+  }
+
+  34% {
+    opacity: 1;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+#town__farm-all {
+  animation: $scene-one-duration ease-in-out 0s alternate paused farm-all;
+}
+
+@keyframes farm-all {
+  0% {
+    opacity: 0;
+  }
+
+  44% {
+    opacity: 0;
+  }
+
+  46% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#town__return-farm {
+  animation: $scene-one-duration ease-in-out 0s alternate paused farm-return;
+}
+
+@keyframes farm-return {
+  0% {
+    opacity: 0;
+  }
+
+  44% {
+    opacity: 0;
+  }
+
+  46% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+// ______________________ WOODS BUTTON ______________________
+
+#town__path-to-woods-one {
+  animation: 1s ease-in-out 0s alternate paused woods-path;
+  opacity: 0;
+}
+
+#town__path-to-woods-two {
+  animation: 1s ease-in-out 0.5s alternate paused woods-path;
+  opacity: 0;
+}
+
+#town__path-to-woods-three {
+  animation: 1s ease-in-out 1s alternate paused woods-path;
+  opacity: 0;
+}
+
+#town__path-to-woods-four {
+  animation: 1s ease-in-out 1.5s alternate paused woods-path;
+  opacity: 0;
+}
+
+
+@keyframes woods-path {
+
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+#town__zoom-woods {
+  animation: $scene-one-duration ease-in-out 3s alternate paused button-woods;
+  opacity: 0;
+}
+
+@keyframes button-woods {
+
+  0% {
+    opacity: 0;
+  }
+
+  4% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// ______________________ WOODS TEXTS ______________________
+
+#town__text-woods-one {
+  animation: $scene-one-duration ease-in-out 0s alternate paused woods-textone;
+}
+
+@keyframes woods-textone {
+  0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 0;
+  }
+
+  4% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  14% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#town__text-woods-two {
+  animation: $scene-one-duration ease-in-out 0s alternate paused woods-texttwo;
+}
+
+@keyframes woods-texttwo {
+  0% {
+    opacity: 0;
+  }
+
+  14% {
+    opacity: 0;
+  }
+
+  16% {
+    opacity: 1;
+  }
+
+  28% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+#town__text-woods-three {
+  animation: $scene-one-duration ease-in-out 0s alternate paused woods-textthree;
+}
+
+@keyframes woods-textthree {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  32% {
+    opacity: 1;
+  }
+
+  46% {
+    opacity: 1;
+  }
+
+  48% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+#town__text-woods-four {
+  animation: $scene-one-duration ease-in-out 0s alternate paused woods-textfour;
+}
+
+@keyframes woods-textfour {
+  0% {
+    opacity: 0;
+  }
+
+  48% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  68% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+#town__text-woods-five {
+  animation: $scene-one-duration ease-in-out 0s alternate paused woods-textfive;
+}
+
+@keyframes woods-textfive {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  72% {
+    opacity: 1;
+  }
+
+  88% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+#town__woods-all {
+  animation: $scene-one-duration ease-in-out 0s alternate paused woods-all;
+}
+
+@keyframes woods-all {
+  0% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  92% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#town__return-woods {
+  animation: $scene-one-duration ease-in-out 0s alternate paused woods-return;
+}
+
+@keyframes woods-return {
+  0% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+    transform: translate3d(0, -2%, 0);
+  }
+
+  91% {
+    transform: translate3d(0, 0, 0);
+  } 
+
+  92% {
+    opacity: 1;
+    transform: translate3d(0%, -1%, 0);
+  }
+
+  93% {
+   transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+// ______________________ QUESTIONNAIRE BUTTON ______________________
+
+#town__path-to-questionnaire-one {
+  animation: 1s ease-in-out 0s alternate paused questionnaire-path;
+  opacity: 0;
+}
+
+#town__path-to-questionnaire-two {
+  animation: 1s ease-in-out 0.5s alternate paused questionnaire-path;
+  opacity: 0;
+}
+
+#town__path-to-questionnaire-three {
+  animation: 1s ease-in-out 1s alternate paused questionnaire-path;
+  opacity: 0;
+}
+
+#town__path-to-questionnaire-four {
+  animation: 1s ease-in-out 1.5s alternate paused questionnaire-path;
+  opacity: 0;
+}
+
+
+@keyframes questionnaire-path {
+
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}
+
+#town__questionnaire {
+  animation: $scene-one-duration ease-in-out 0s alternate paused button-q;
+  opacity: 0;
+}
+
+@keyframes button-q {
+
+  0% {
+    opacity: 0;
+  }
+
+  4% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+// ______________________ TOWN TEXTS ______________________
+
+#town__text-city-one {
+  animation: $scene-one-duration ease-in-out 0s alternate paused city-textone;
+}
+
+@keyframes city-textone {
+  0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 0;
+  }
+
+  4% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  22% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#town__text-city-two {
+  animation: $scene-one-duration ease-in-out 0s alternate paused city-texttwo;
+}
+
+@keyframes city-texttwo {
+  0% {
+    opacity: 0;
+  }
+
+  22% {
+    opacity: 0;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  32% {
+    opacity: 1;
+  }
+
+  34% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#town__text-city-three {
+  animation: $scene-one-duration ease-in-out 0s alternate paused city-textthree;
+}
+
+@keyframes city-textthree {
+  0% {
+    opacity: 0;
+  }
+
+  34% {
+    opacity: 0;
+  }
+
+  36% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 1;
+  }
+
+  46% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+#town__city-all {
+  animation: $scene-one-duration ease-in-out 0s alternate paused city-all;
+}
+
+@keyframes city-all {
+  0% {
+    opacity: 0;
+  }
+
+  46% {
+    opacity: 0;
+  }
+
+  48% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#town__return-city {
+  animation: $scene-one-duration ease-in-out 0s alternate paused city-return;
+}
+
+@keyframes city-return {
+  0% {
+    opacity: 0;
+  }
+
+  46% {
+    opacity: 0;
+    transform: translate3d(0, -2%, 0);
+  }
+
+  47% {
+     transform: translate3d(0, 0, 0);
+  }
+
+  48% {
+    opacity: 1;
+    transform: translate3d(0, -1%, 0);
+  }
+
+  49% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+// ______________________ FARM COWS ______________________
+
+//______ MAIN COW "cow-2"
+
+
+#town__cow-head-2, #town__cow-head-11 {
+	animation: 15s ease-in 0s infinite forwards cows-headtwo;
+	transform-origin: center;
+}
+
+#town__cow-head-neck-6, #town__cow-head-13 {
+  animation: 15s ease-in 9s infinite forwards cows-headtwo;
+  transform-origin: center;
+}
+
+@keyframes cows-headtwo {
+	0% {
+        transform: translate3d(0, 1px, 0);
+    }
+
+    10% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    14% {
+        transform: translate3d(0, 1px, 0);
+    }
+
+    18% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+}
+
+
+#town__cow-head-ears-one {
+	animation: 15s ease-in 0s infinite forwards cows-ear-one;
+	transform-origin: center;
+}
+
+@keyframes cows-ear-one {
+	0% {
+        transform: translate3d(0, 0.5px, 0);
+    }
+
+    20% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: translate3d(0, 0.5px, 0);
+    }
+
+    30% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    35% {
+        transform: translate3d(0, 0.5px, 0);
+    }
+
+    40% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    45% {
+        transform: translate3d(0, 0.5px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+}
+
+#town__cow-head-ears-two {
+	animation: 15s ease-in 0s infinite forwards cows-earstwo;
+	transform-origin: center;
+}
+
+@keyframes cows-earstwo {
+	0% {
+        transform: translate3d(0, 0.5px, 0);
+    }
+
+    23% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    28% {
+        transform: translate3d(0, 0.5px, 0);
+    }
+
+    33% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    38% {
+        transform: translate3d(0, 0.5px, 0);
+    }
+
+    43% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+}
+
+//______COWS
+
+#town__farm-cow-tail { 
+  animation: 15s ease-in 0s infinite forwards cow-tail;
+}
+
+#town__farm-cow-tail-two { 
+  animation: 15s ease-in 5s infinite forwards cow-tail;
+}
+
+@keyframes cow-tail {
+  0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    20% {
+        transform: translate3d(0, 1px, 0);
+    }
+
+    24% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    28% {
+        transform: translate3d(0, 1px, 0);
+    }
+
+    30%{
+      transform: translate3d(0, 0, 0);
+    }
+
+    32%{
+      transform: translate3d(0, 1px, 0);
+    }
+
+    33%{
+      transform: translate3d(0, 0, 0);
+    }
+
+    34%{
+      transform: translate3d(0, 0, 0);
+    }
+
+    36%{
+      transform: translate3d(0, 0, 0);
+    }
+
+    37%{
+      transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+}
+
+
+#town__cow-head-3 {
+	animation: 15s ease-in 0s infinite forwards cowh-three;
+}
+
+@keyframes cowh-three {
+	0% {
+        transform: translate3d(0, 3px, 0);
+    }
+
+    20% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    24% {
+        transform: translate3d(0, 3px, 0);
+    }
+
+    28% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    30%{
+    	transform: translate3d(1px, 0, 0);
+    }
+
+    32%{
+    	transform: translate3d(1px,0, 0);
+    }
+
+    33%{
+    	transform: translate3d(0, 0, 0);
+    }
+
+    34%{
+    	transform: translate3d(1px, 0, 0);
+    }
+
+    36%{
+    	transform: translate3d(1px, 0, 0);
+    }
+
+    37%{
+    	transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+}
+
+#town__cow-head-4, #town__cow-head-12 {
+  animation: 15s ease-in 5s infinite forwards cown-one;
+}
+
+#town__cow-head-neck, #town__cow-head-neck-8 {
+	animation: 15s ease-in 0s infinite forwards cown-one;
+}
+
+@keyframes cown-one {
+	0% {
+        transform: translate3d(0, 5px, 0);
+    }
+
+    30% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    70% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 5px, 0);
+    }
+
+}
+
+
+
+//______ METHANE
+
+#town__cows-co2-one {
+	animation: 15s ease-in 0s infinite forwards cows-methane;
+}
+
+#town__cows-co2-two {
+	animation: 15s ease-in 2s infinite forwards cows-methane;
+  opacity: 0;
+}
+
+#town__cows-co2-three {
+	animation: 15s ease-in 4s infinite forwards cows-methane;
+  opacity: 0;
+}
+
+#town__cows-co2-four {
+	animation: 15s ease-in 6s infinite forwards cows-methane;
+  opacity: 0;
+}
+
+
+@keyframes cows-methane {
+	0% {
+        transform: translate3d(0, 20px, 0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    35% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate3d(0, -70px, 0);
+        opacity: 0;
+    }
+
+}
+
+
+
+// ______________________ FARM CAR ______________________
+
+#town__car-co2-one {
+	animation: 6s ease-in 0s alternate forwards car-cloud;
+  opacity: 0;
+}
+
+#town__car-co2-two {
+  animation: 6s ease-in 1s alternate forwards car-cloud;
+  opacity: 0;
+}
+
+#town__car-co2-three {
+  animation: 6s ease-in 1.5s alternate forwards car-cloud;
+  opacity: 0;
+}
+
+@keyframes car-cloud {
+	0% {
+      transform: translate3d(20px, 0, 0);
+      opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate3d(100px, -20px, 0);
+        opacity: 0;
+    }
+}
+
+
+
+// ______________________ FACTORIES ______________________
+
+//______ FACTORY ONE
+
+#town__factory-one-co2-one {
+	animation: 8s ease-in 0s infinite forwards factone-one;
+}
+
+@keyframes factone-one {
+    0% {
+      transform: translate3d(0, 0, 0);
+      opacity: 0;
+    }
+
+    5% {
+      opacity: 0;
+    }
+
+    40% {
+      opacity: 1;
+    }
+
+    45% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+      transform: translate3d(10px, -10px, 0);
+    }
+
+    60% {
+      opacity: 0;
+      transform: translate3d(95px, -30px, 0);
+    }
+
+    100% {
+      transform: translate3d(0px, 0, 0);
+      opacity: 0;
+    }
+}
+
+#town__factory-one-co2-two {
+	animation: 8s ease-in 0s infinite forwards factone-two;
+}
+
+@keyframes factone-two {
+   0% {
+      transform: translate3d(0, 10px, 0);
+      opacity: 0;
+    }
+
+    15% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    55% {
+      opacity: 1;
+    }
+
+    60% {
+      opacity: 0;
+      transform: translate3d(20px, -10px, 0);
+    }
+
+    70% {
+      opacity: 0;
+      transform: translate3d(95px, -30px, 0);
+    }
+
+    100% {
+      transform: translate3d(0px, 0, 0);
+      opacity: 0;
+    }
+}
+
+#town__factory-one-co2-three {
+	animation: 8s ease-in 0s infinite forwards factone-three;
+}
+
+@keyframes factone-three {
+     0% {
+      transform: translate3d(0, 30px, 0);
+      opacity: 0;
+    }
+
+    25% {
+      opacity: 0;
+    }
+
+    60% {
+      opacity: 1;
+    }
+
+    65% {
+      opacity: 1;
+    }
+
+    70% {
+      opacity: 0;
+      transform: translate3d(30px, -10px, 0);
+    }
+
+    80% {
+      opacity: 0;
+      transform: translate3d(95px, -30px, 0);
+    }
+
+    100% {
+      transform: translate3d(0px, 0, 0);
+      opacity: 0;
+    }
+
+}
+
+//_______ FACTORY TWO
+
+#town__factory-two-co2-one {
+	animation: 7s ease-in 0s infinite forwards facttwo-one;
+}
+
+@keyframes facttwo-one {
+	 0% {
+      transform: translate3d(0, 0, 0);
+      opacity: 0;
+    }
+
+    5% {
+      opacity: 0;
+    }
+
+    40% {
+      opacity: 1;
+    }
+
+    45% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+      transform: translate3d(10px, -10px, 0);
+    }
+
+    60% {
+      opacity: 0;
+      transform: translate3d(95px, -30px, 0);
+    }
+
+    100% {
+      transform: translate3d(0px, 0, 0);
+      opacity: 0;
+    }
+}
+
+#town__factory-two-co2-two {
+	animation: 7s ease-in 0s infinite forwards facttwo-two;
+}
+
+@keyframes facttwo-two {
+   0% {
+      transform: translate3d(0, 10px, 0);
+      opacity: 0;
+    }
+
+    15% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    55% {
+      opacity: 1;
+    }
+
+    60% {
+      opacity: 0;
+      transform: translate3d(20px, -10px, 0);
+    }
+
+    70% {
+      opacity: 0;
+      transform: translate3d(95px, -30px, 0);
+    }
+
+    100% {
+      transform: translate3d(0px, 0, 0);
+      opacity: 0;
+    }
+}
+
+#town__factory-two-co2-three {
+	animation: 7s ease-in 0s infinite forwards facttwo-three;
+}
+
+@keyframes facttwo-three {
+    0% {
+      transform: translate3d(0, 30px, 0);
+      opacity: 0;
+    }
+
+    25% {
+      opacity: 0;
+    }
+
+    60% {
+      opacity: 1;
+    }
+
+    65% {
+      opacity: 1;
+    }
+
+    70% {
+      opacity: 0;
+      transform: translate3d(30px, -10px, 0);
+    }
+
+    80% {
+      opacity: 0;
+      transform: translate3d(95px, -30px, 0);
+    }
+
+    100% {
+      transform: translate3d(0px, 0, 0);
+      opacity: 0;
+    }
+}
+
+
+
+// ______________________ TRAFFIC ______________________
+
+// ______ CAR TWO
+
+#town__traffic-co2-two-one {
+	animation: 7s ease-in 0s infinite forwards tra-one;
+  opacity: 0;
+}
+
+#town__traffic-co2-two-two {
+	animation: 7s ease-in 0s infinite forwards tra-two;
+  opacity: 0;
+}
+
+#town__traffic-co2-two-three {
+	animation: 7s ease-in 0s infinite forwards tra-three;
+  opacity: 0;
+}
+
+
+// ______ CAR ONE
+
+#town__traffic-co2-one-one {
+	animation: 7s ease-in 5s infinite forwards tra-one;
+  opacity: 0;
+}
+
+#town__traffic-co2-one-two {
+	animation: 7s ease-in 5s infinite forwards tra-two;
+  opacity: 0;
+}
+
+#town__traffic-co2-one-three {
+	animation: 7s ease-in 5s infinite forwards tra-three;
+  opacity: 0;
+}
+
+@keyframes tra-one {
+	0% {
+      transform: translate3d(-5px, 0, 0);
+      opacity: 0;
+    }
+
+    10% {
+    	opacity: 0;
+    }
+
+    20% {
+      opacity: 1;
+    }
+
+    30% {
+    	opacity: 1;
+    }
+
+    40% {
+    	opacity: 0;
+    }
+
+    100% {
+    	transform: translate3d(20px, -40px, 0);
+      opacity: 0;
+    }
+
+}
+
+
+@keyframes tra-two {
+	0% {
+      transform: translate3d(-5px, 0, 0);
+      opacity: 0;
+    }
+
+    30% {
+    	opacity: 0;
+    }
+
+    40% {
+      opacity: 1;
+    }
+
+    60% {
+    	opacity: 1;
+    }
+
+    70% {
+    	opacity: 0;
+    }
+
+    100% {
+    	transform: translate3d(20px, -40px, 0);
+      opacity: 0;
+    }
+
+}
+
+@keyframes tra-three {
+	0% {
+      transform: translate3d(-5px, 0, 0);
+      opacity: 0;
+    }
+
+    50% {
+    	opacity: 0;
+    }
+
+    60% {
+      opacity: 1;
+    }
+
+    80% {
+    	opacity: 1;
+    }
+
+    90% {
+    	opacity: 0;
+    }
+
+    100% {
+    	transform: translate3d(20px, -40px, 0);
+      opacity: 0;
+    }
+
+}
+
+
+
+// ______________________ CAR PARK ______________________
+
+#town__car-park-car {
+  animation: 40s ease 0s alternate forwards carpark-one;
+}
+
+@keyframes carpark-one {
+    0% {
+        transform: translate3d(-160%, 0, 0);
+    }
+
+    5% {
+        transform: translate3d(-160%, 0, 0);
+    }
+
+    35% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    56% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    88% {
+        transform: translate3d(-160%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-60%, 0, 0);
+    }
+}
+
+#town__car-park-car-two {
+  animation: 40s ease 0s alternate infinite carpark-two;
+}
+
+@keyframes carpark-two {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    70% {
+        transform: translate3d(-260%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+
+// ______________________ PLANE ______________________
+
+#town__plane-co2-one {
+	animation: 10s ease-in 0s alternate forwards plane-one;
+}
+
+@keyframes plane-one {
+	0% {
+        transform: translate3d(-10px, 20px, 0);
+        opacity: 0;
+    }
+
+    58% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    76% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate3d(150px, 0, 0);
+        opacity: 0;
+    }
+
+}
+
+
+#town__plane-co2-two {
+	animation: 10s ease-in 0s alternate forwards plane-two;
+}
+
+@keyframes plane-two {
+	 0% {
+        transform: translate3d(-10px, 20px, 0);
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    62% {
+        opacity: 1;
+    }
+
+    86% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate3d(150px, 0, 0);
+        opacity: 0;
+    }
+}
+
+#town__plane-co2-three {
+	animation: 10s ease-in 0s alternate forwards plane-three;
+}
+
+@keyframes plane-three {
+	 0% {
+        transform: translate3d(-10px, 20px, 0);
+        opacity: 0;
+    }
+
+    62% {
+        opacity: 0;
+    }
+
+    64% {
+        opacity: 1;
+    }
+
+    96% {
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate3d(150px, 0, 0);
+        opacity: 0;
+    }
+}
+
+
+#town__plane {
+	animation: 10s ease-in 0s alternate forwards plane-fly;
+}
+
+@keyframes plane-fly {
+	0% {
+        transform: translate3d(-400px, 300px, 0);
+    }
+
+    100% {
+        transform: translate3d(600px, -300px, 0);
+    }
+
+}
+
+
+
+// ______________________ BIRDS ______________________
+
+// _____________ SINGLE BIRD
+
+
+#town__bird-fall {
+  animation: 2s ease-in 0s infinite paused bird-one; 
+  transform-origin: center ;
+}
+
+#town__bird-back-fall {
+  animation: 2s ease-in 0s infinite paused bird-two; 
+  transform-origin: center ;
+}
+
+@keyframes bird-one {
+   from {
+        transform: translate3d(0, 0, 0) ;
+    }
+
+    to {
+        transform: translate3d(0, 100px, 0) ;
+    }
+}
+
+@keyframes bird-two {
+   from {
+        transform: translate3d(0, 0, 0) ;
+    }
+
+    to {
+        transform: translate3d(0, 100px, 0) ;
+    }
+}
+
+
+
+#town__bird-wing-one {
+  animation: 3s ease-in 0s infinite forwards bird-wingone;
+  transform-origin: center;
+}
+
+@keyframes bird-wingone {
+  0% {
+        transform: translate3d(1px, 0, 0);
+    }
+
+    25% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(1px, 0, 0);
+    }
+
+    75% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+}
+
+
+#town__bird-wing-two {
+  animation: 3s ease-in 0s infinite forwards bird-wingtwo;
+}
+
+@keyframes bird-wingtwo {
+   0% {
+        transform: translate3d(1px, 0, 0);
+    }
+
+    25% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(1px, 0, 0);
+    }
+
+    75% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+}
+
+
+// _____________ GROUPS OF BIRDS
+
+#town__birds-one, #town__birds-two {
+  display: none;
+}
+
+#bg-bird-wing-two, #bg-bird-wing-two-2, #bg-bird-wing-two-3, #bg-bird-wing-two-4, #bg-bird-wing-two-5, #bg-bird-wing-two-6, #bg-bird-wing-two-7, #bg-bird-wing-two-8, #bg-bird-wing-two-9, #bg-bird-wing-two-10, #bg-bird-wing-two-11, #bg-bird-wing-two-12, #bg-bird-wing-two-13, #bg-bird-wing-two-14, #bg-bird-wing-two-15, #bg-bird-wing-two-16, #bg-bird-wing-two-17, #bg-bird-wing-two-18, #bg-bird-wing-two-19, #bg-bird-wing-two-20, #bg-bird-wing-two-21, #bg-bird-wing-two-22, #bg-bird-wing-two-23, #bg-bird-wing-two-24 {
+  animation: 0.5s ease-out 0s infinite forwards birds-wingtwos; 
+}
+
+@keyframes birds-wingtwos {
+  from  {
+        transform: skewY(2deg) skewX(1deg) rotate(0deg);
+    }
+
+    to {
+        transform: skewY(0deg) skewX(0deg) rotate(2deg);
+    }
+
+}
+
+
+#bg-bird-wing-one, #bg-bird-wing-one-2, #bg-bird-wing-one-3, #bg-bird-wing-one-4, #bg-bird-wing-one-5, #bg-bird-wing-one-6, #bg-bird-wing-one-7, #bg-bird-wing-one-8, #bg-bird-wing-one-9, #bg-bird-wing-one-10, #bg-bird-wing-one-11, #bg-bird-wing-one-12, #bg-bird-wing-one-13, #bg-bird-wing-one-14, #bg-bird-wing-one-15, #bg-bird-wing-one-16, #bg-bird-wing-one-17, #bg-bird-wing-one-18, #bg-bird-wing-one-19, #bg-bird-wing-one-20, #bg-bird-wing-one-21, #bg-bird-wing-one-22, #bg-bird-wing-one-23, #bg-bird-wing-one-24 {
+  animation: 0.5s ease-out 0s infinite forwards birds-wingones; 
+}
+
+@keyframes birds-wingones {
+  from  {
+        transform: skewY(2deg) skewX(1deg) rotate(0deg);
+    }
+
+    to {
+        transform: skewY(0deg) skewX(0deg) rotate(2deg);
+    }
+
+}
+
+
+
+// ______________________ FLOOD ______________________
+
+#town__flood-main, #town__flood-back, #town__flood-front, #town__flood-one, #town__flood-two, #town__flood-three, #town__flood-four, #town__reflections { 
+  display: none;
+}
+
+
+
+// ______________________ DEAD TREES ______________________
+
+#town__trees-dead, #town__trees-dead-two, #town__city-trees {
+  display: none;
+}
+

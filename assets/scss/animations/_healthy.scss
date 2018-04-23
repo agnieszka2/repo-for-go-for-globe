@@ -1,0 +1,364 @@
+// ======================
+//   HEALTHY ENVIRONMENT
+// ======================
+
+
+
+
+// INDEX 
+// ======================
+
+// section (line number)
+
+// 1. SCENE TEXTS (23)
+// 2. ENDING SCREEN (119)
+// 3. ANIMATIONS - WIND TURBINES (291)
+
+
+
+//    STYLES - ANIMATION: duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name
+// ======================
+
+// ______________________ SCENE TEXTS ______________________
+
+#town-eco__text-one {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards eco-one;
+} 
+
+@keyframes eco-one {
+  0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 0;
+  }
+
+  4% {
+    opacity: 1;
+  }
+
+  18% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#town-eco__text-two {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards eco-two;
+} 
+
+@keyframes eco-two {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  22% {
+    opacity: 1;
+  }
+
+  28% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+#town-eco__text-three {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards eco-three;
+} 
+
+@keyframes eco-three {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  32% {
+    opacity: 1;
+  }
+
+  42% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+// ______________________ ENDING SCREEN ______________________
+
+#town-eco__text-show-all,
+#town-eco__button {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards button-end;
+} 
+
+@keyframes button-end {
+  0% {
+    opacity: 0;
+  }
+
+  44% {
+    opacity: 0;
+  }
+
+ 46% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#town-eco__the-end {
+  display: none;
+} 
+
+#town-eco__end-text-one {
+  animation: 2s ease-in-out 0s alternate paused end-one;
+}
+
+@keyframes end-one {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#town-eco__end-text-two {
+  animation: 13s ease-in-out 0s alternate paused end-two;
+}
+
+@keyframes end-two {
+  0% {
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  95% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#town-eco__end-text-three {
+  animation: 10s ease-in-out 13s alternate paused end-three;
+  opacity: 0;
+}
+
+@keyframes end-three {
+  0% {
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#town-eco__logo {
+  animation: 13s ease-in-out 15s alternate paused end-logo;
+  opacity: 0;
+}
+
+@keyframes end-logo {
+  0% {
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+#town-eco__pointer {
+  animation: 6s ease-in-out 20s alternate paused pointer-eco;
+  opacity: 0;
+} 
+
+@keyframes pointer-eco {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+#town-eco__pointer-arrow {
+  animation: 4s ease-in-out 0s infinite forwards pointer-ecoarrow;
+} 
+
+@keyframes pointer-ecoarrow {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate3d(-1%, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(-1%, 0, 0);
+  }  
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+#town-eco__replay {
+  animation: 2s ease-in-out 0s alternate paused eco-replay;
+  opacity: 0;
+}
+
+@keyframes eco-replay {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+// ______________________ ANIMATIONS - WIND TURBINES ______________________
+
+#turbine-farm__wings {
+   animation: 15s ease-out 0s infinite forwards t-w;
+    transform-origin: center;
+    transform-box:fill-box;
+}
+
+@keyframes t-w {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+#turbine__wings-one {
+   animation: 18s ease-out 0s infinite forwards t-w-one;
+    transform-origin: center;
+    transform-box:fill-box;
+}
+
+@keyframes t-w-one {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#turbine__wings-two {
+   animation: 16.7s ease-out 0s infinite forwards t-w-two;
+    transform-origin: center;
+    transform-box:fill-box;
+}
+
+@keyframes t-w-two {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#turbine__wings-three {
+   animation: 13s ease-out 0s infinite forwards t-w-three;
+    transform-origin: center;
+    transform-box:fill-box;
+}
+
+@keyframes t-w-three {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

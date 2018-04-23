@@ -1,0 +1,1299 @@
+// ======================
+// UNIVERSE
+// ======================
+
+
+
+// INDEX 
+// ======================
+
+// section (line number)
+
+// 1. VARIABLES (27)
+// 2. CONNECTIONS (37)
+// 3. STYLES (60)
+// 4. PLAY POINTER (64)
+// 5. STARS (94)
+// 6. TEXT (127)
+// 7. ATMOSPHERE (203)
+// 8. RAYS (391)
+// 9. MORE INFORMATION (881)
+// 10. WARMING (1056)
+// 11. BUTTONS (1087)
+// 12. ZOOM (1179)
+
+
+
+//    VARIABLES
+// ======================
+
+// ______________________ Length of a stroke ______________________
+
+$universe__rays-sun-earth-length: 1608.8997802734375;
+$universe__progress-bar-progress-length: 1540.47998046875;
+
+
+
+//    CONNECTIONS
+// ======================
+
+// ______________________ Set up for paths ______________________
+
+.universe__rays-sun-earth {
+    @include line-draw-setup($universe__rays-sun-earth-length, ray-s-e)
+}
+    @include rayse-draw(ray-s-e, (-$universe__rays-sun-earth-length));
+
+
+.skip-animation .universe__text-two {
+   display: none;
+ }
+
+.universe__progress-bar-progress {
+    @include line-draw-setup($universe__progress-bar-progress-length, progress-move)
+}
+    @include progress-draw(progress-move, (-$universe__progress-bar-progress-length));
+
+
+
+
+//    STYLES - ANIMATION: duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name
+// ======================  
+
+
+// ______________________ PLAY POINTER ______________________
+
+#universe__pointer-arrow {
+  animation: 4s ease-in-out 0s infinite forwards universe-pointer;
+}
+
+ @keyframes universe-pointer {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate3d(-1%, 1%, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(-1%, 1%, 0);
+  }  
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+
+// ______________________ STARS ______________________
+
+#universe__stars-one {
+  animation: 120s ease-in-out 0s infinite forwards stars-one; 
+}
+
+@keyframes stars-one {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#universe__stars-three {
+  animation: $scene-one-duration ease-in-out 0s infinite forwards stars-three;
+  transform-origin: center;
+}
+
+@keyframes stars-three {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+
+
+// ______________________ TEXT ______________________
+
+.universe__text-one {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards intro-text;
+}
+
+.skip-animation .universe__text-one {
+  display: none;
+}
+
+@keyframes intro-text {
+  0% {
+    opacity: 0;
+  }
+
+  2% {
+    opacity: 0;
+  }
+
+  4% {
+    opacity: 1;
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 0;
+  }  
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.universe__text-two {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards intro-texttwo;
+  opacity: 0;
+}
+
+.skip-animation .universe__text-two {
+   display: none;
+}
+
+@keyframes intro-texttwo {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  16% {
+    opacity: 1;
+  }
+
+  18% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+// ______________________ ATMOSPHERE ______________________
+
+.universe__earth-whole {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards globe-show;
+}
+
+.skip-animation .universe__earth-whole {
+  animation: instant-in 1ms ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes globe-show {
+  0% {
+    opacity: 0;
+  }
+
+  18% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.universe__earth-title {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards title-one;
+}
+
+.skip-animation .universe__earth-title {
+   display: none;
+}
+
+@keyframes title-one {
+  0% {
+    opacity: 0;
+  }
+
+  19% {
+    opacity: 0;
+  }
+
+  21% {
+    opacity: 1;
+  }
+
+  22% {
+    opacity: 1;
+  }
+
+  23% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.universe__earth-atmo {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards atmo-show;
+}
+
+.skip-animation .universe__earth-atmo {
+  animation: instant-in 1ms ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes atmo-show {
+  0% {
+    opacity: 0;
+  }
+
+  21% {
+    opacity: 0;
+  }
+
+  23% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.universe__atmo-title {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards title-two;
+}
+
+.skip-animation .universe__atmo-title {
+  display: none;
+}
+
+@keyframes title-two {
+  0% {
+    opacity: 0;
+  }
+
+  22% {
+    opacity: 0;
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.universe__sun {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards sun-show;
+}
+
+.skip-animation .universe__sun {
+  animation: instant-in 1ms ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sun-show {
+   0% {
+    opacity: 0;
+  }
+
+  24% {
+    opacity: 0;
+  }
+
+  26% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.universe__sun-title {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards title-three;
+}
+
+.skip-animation .universe__sun-title {
+  display: none;
+}
+
+@keyframes title-three {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  27% {
+    opacity: 1;
+  }
+
+  28% {
+    opacity: 1;
+  }
+
+  29% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+
+
+// ____________________________  RAYS ____________________________
+
+// ______________________  RAYS - SUN > EARTH 
+
+
+.universe__info-one {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards info-one; 
+}
+
+.skip-animation .universe__info-one {
+  display: none;
+}
+
+
+@keyframes info-one {
+    0% {
+     opacity: 0;
+    }
+
+    32% {
+        opacity: 0;
+    }
+
+    34% {
+        opacity: 1;
+    }
+
+    41% {
+        opacity: 1;
+    }
+
+    42% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+// ______________________  RAYS - ATMOSPHERE 
+
+.universe__rays-atmo-one-first {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards ray-atmo-one;
+}
+
+.skip-animation .universe__rays-atmo-one-first {
+  display: none;
+}
+
+@keyframes ray-atmo-one {
+    0% {
+      opacity: 0;
+    }
+
+    55% {
+      opacity: 0;
+    }
+
+    56% {
+     opacity: 1;
+    }
+
+    57% {
+     opacity: 1;
+    }
+
+    58% {
+      opacity: 1;
+    }
+
+    59% {
+      opacity: 0;
+    }
+
+    76% {
+     opacity: 1;
+    }
+
+    77% {
+      opacity: 1;
+    }
+
+    78% {
+      opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+.universe__rays-atmo-one-second {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards ray-atmo-two;
+ }
+
+ .skip-animation .universe__rays-atmo-one-second {
+  display: none;
+}
+
+@keyframes ray-atmo-two {
+    0% {
+      opacity: 0;
+    }
+
+    57% {
+      opacity: 0;
+    }
+
+    58% {
+     opacity: 1;
+    }
+
+    59% {
+     opacity: 1;
+    }
+
+    60% {
+      opacity: 1;
+    }
+
+    61% {
+      opacity: 0;
+    }
+
+    78% {
+     opacity: 0;
+    }
+
+    79% {
+     opacity: 1;
+    }
+
+    80% {
+      opacity: 1;
+    }
+
+    81% {
+      opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+.universe__rays-atmo-two-first {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards ray-atmo-three;
+ }
+
+ .skip-animation .universe__rays-atmo-two-first {
+  display: none;
+}
+
+@keyframes ray-atmo-three {
+    0% {
+      opacity: 0;
+    }    
+
+    59% {
+      opacity: 0;
+    }
+
+    60% {
+     opacity: 1;
+    }
+
+    61% {
+     opacity: 1;
+    }
+
+    62% {
+      opacity: 1;
+    }
+
+    63% {
+      opacity: 0;
+    }
+
+    81% {
+     opacity: 0;
+    }
+
+    82% {
+     opacity: 1;
+    }
+
+    83% {
+      opacity: 1;
+    }
+
+    84% {
+      opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.universe__rays-atmo-two-second {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards ray-atmo-four;
+ }
+
+.skip-animation .universe__rays-atmo-two-second {
+  display: none;
+}
+
+@keyframes ray-atmo-four {
+    0% {
+      opacity: 0;
+    }
+
+    61% {
+      opacity: 0;
+    }
+
+    62% {
+     opacity: 1;
+    }
+
+    63% {
+     opacity: 1;
+    }
+
+    64% {
+      opacity: 1;
+    }
+
+    65% {
+      opacity: 0;
+    }
+
+    84% {
+     opacity: 0;
+    }
+
+    85% {
+     opacity: 1;
+    }
+
+    86% {
+      opacity: 1;
+    }
+
+    87% {
+      opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+.universe__info-three {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards info-three; 
+}
+
+.skip-animation .universe__info-three {
+  display: none;
+}
+
+@keyframes info-three {
+    0% {
+     opacity: 0;
+    }
+
+    55% {
+        opacity: 0;
+    }
+
+    56% {
+        opacity: 1;
+    }
+
+    63% {
+        opacity: 1;
+    }
+
+    64% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+// ______________________  RAYS - SPACE 
+
+.universe__rays-earth-space-first {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards earth-space-one;
+}
+
+.skip-animation .universe__rays-earth-space-first {
+  display: none;
+}
+
+@keyframes earth-space-one {
+    0% {
+      opacity: 0;
+    }
+
+    48% {
+      opacity: 0;
+    }
+
+    49% {
+     opacity: 1;
+    }
+
+    50% {
+     opacity: 1;
+    }
+
+    53% {
+        opacity: 1;
+    }
+
+    55% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.universe__rays-earth-space-second {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards earth-space-two;
+}
+
+.skip-animation .universe__rays-earth-space-second {
+  display: none;
+}
+
+@keyframes earth-space-two {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    51% {
+     opacity: 1;
+    }
+
+    52% {
+     opacity: 1;
+    }
+
+    53% {
+        opacity: 1;
+    }
+
+    55% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.universe__rays-atmo-space-first {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards atmo-space-one;
+}
+
+.skip-animation .universe__rays-atmo-space-first {
+  display: none;
+}
+
+@keyframes atmo-space-one {
+    0% {
+      opacity: 0;
+    }
+
+    41% {
+      opacity: 0;
+    }
+
+    42% {
+     opacity: 1;
+    }
+
+    43% {
+     opacity: 1;
+    }
+
+    46% {
+        opacity: 1;
+    }
+
+    48% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.universe__rays-atmo-space-second {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards atmo-space-two;
+}
+
+.skip-animation .universe__rays-atmo-space-second {
+  display: none;
+}
+
+@keyframes atmo-space-two {
+    0% {
+      opacity: 0;
+    }
+
+    43% {
+      opacity: 0;
+    }
+
+    44% {
+     opacity: 1;
+    }
+
+    45% {
+     opacity: 1;
+    }
+
+    47% {
+        opacity: 1;
+    }
+
+    48% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.universe__info-two {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards info-two; 
+}
+
+.skip-animation .universe__info-two {
+  display: none;
+}
+
+
+@keyframes info-two {
+    0% {
+     opacity: 0;
+    }
+
+    42% {
+        opacity: 0;
+    }
+
+    44% {
+        opacity: 1;
+    }
+
+    53% {
+        opacity: 1;
+    }
+
+    55% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+// ______________________  MORE INFORMATION ______________________
+
+.universe__info-four-a {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards info-four;
+}
+
+.skip-animation .universe__info-four-a {
+  display: none;
+}
+
+@keyframes info-four {
+    0% {
+       opacity: 0;
+    }
+
+    64% {
+        opacity: 0;
+    }
+
+    66% {
+        opacity: 1;
+    }
+
+    73% {
+        opacity: 1;
+    }
+
+    74% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.universe__info-four-b {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards info-fourone;
+}
+
+.skip-animation .universe__info-four-b {
+  display: none;
+}
+
+@keyframes info-fourone {
+    0% {
+       opacity: 0;
+    }
+
+    68% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    73% {
+        opacity: 1;
+    }
+
+    74% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.universe__info-five {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards info-five;
+}
+
+.skip-animation .universe__info-five {
+  display: none;
+}
+
+@keyframes info-five {
+    0% {
+       opacity: 0;
+    }
+
+    74% {
+        opacity: 0;
+    }
+
+    76% {
+        opacity: 1;
+    }
+
+    83% {
+        opacity: 1;
+    }
+
+    84% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.universe__info-six-one {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards info-sixone;
+}
+
+.skip-animation .universe__info-six-one {
+  display: none;
+}
+
+@keyframes info-sixone {
+    0% {
+       opacity: 0;
+    }
+
+    84% {
+        opacity: 0;
+    }
+
+    86% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    97% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.universe__info-six-two {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards info-sixtwo;
+}
+
+.skip-animation .universe__info-six-two {
+  display: none;
+}
+
+@keyframes info-sixtwo {
+    0% {
+       opacity: 0;
+    }
+
+    86% {
+        opacity: 0;
+    }
+
+    88% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    97% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
+// ______________________  WARMING ______________________
+
+.universe__earth-atmo-warm {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards atmo-warm;
+}
+
+.skip-animation .universe__earth-atmo-warm {
+  animation: instant-in 1ms ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes atmo-warm {
+  0% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  97% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+// ______________________  BUTTONS - SHOW ALL INFORMATION, REPLAY & FACT ______________________
+
+.universe__show-all {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards showall-button; 
+  cursor: pointer;
+}
+
+.skip-animation .universe__show-all {
+  animation: instant-in 1ms ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showall-button {
+  
+  0% {
+      opacity: 0;
+  }
+
+  98% {
+      opacity: 0;
+  }
+
+  99% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 1;
+  }
+
+}
+
+.universe__replay {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards replay-button; 
+  cursor: pointer;
+}
+
+.skip-animation .universe__replay {
+  animation: instant-in 1ms ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes replay-button {
+  
+  0% {
+      opacity: 0;
+  }
+
+  98% {
+      opacity: 0;
+  }
+
+  99% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 1;
+  }
+
+}
+
+.universe__know-one {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards fact-button; 
+}
+
+.skip-animation .universe__know-one {
+  animation: instant-in 1ms ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fact-button {
+  
+  0% {
+      opacity: 0;
+  }
+
+  98% {
+      opacity: 0;
+  }
+
+  99% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 1;
+  }
+
+}
+
+
+// ______________________  ZOOM ______________________
+
+.universe__zoom-button {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards earth-zoom; 
+  cursor: pointer;
+}
+
+.skip-animation .universe__zoom-button {
+  animation: instant-in 1ms ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes earth-zoom {
+  
+  0% {
+      opacity: 0;
+  }
+
+  98% {
+      opacity: 0;
+  }
+
+  99% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 1;
+  }
+
+}
+
+.universe__pointer-two {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards point-two; 
+  opacity: 0;
+}
+
+.skip-animation .universe__pointer-two {
+  animation: instant-in 1ms ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes point-two {
+
+  0% {
+      opacity: 0;
+  }
+
+  98% {
+      opacity: 0;
+  }
+
+  99% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 1;
+  }
+
+}
+
+.universe__pointer-two-arrow {
+  animation: 4s ease-in-out 0s infinite forwards pointertwo-arrow;
+}
+
+.skip-animation .universe__pointer-two-arrow {
+  animation: instant-in 1ms ease-out;
+  animation-fill-mode: forwards;
+}
+
+ @keyframes pointertwo-arrow {
+
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate3d(1%, 1%, 0);
+  }
+
+  50% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: translate3d(1%, 1%, 0);
+  }  
+
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+}
+
+
+#universe__skip {
+  animation: $scene-one-duration ease-in-out 0s alternate forwards skip-button; 
+  opacity: 0;
+}
+
+@keyframes skip-button {
+
+  0% {
+      opacity: 1;
+  }
+
+  98% {
+      opacity: 1;
+  }
+
+  99% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 0;
+  }
+
+}
+
