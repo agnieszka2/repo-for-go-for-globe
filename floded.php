@@ -15,7 +15,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <!-- __________ ECO SCENE __________ -->
+  <!-- __________ FLOODED SCENE __________ -->
 
     <div class="svg-container">
         <div id="fadein">
