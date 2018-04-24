@@ -14,7 +14,7 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- __________ FLOODED SCENE __________ -->
+    <!-- __________ HEALTHY SCENE __________ -->
 
     <div class="slide-container">
         <div id="slide">
