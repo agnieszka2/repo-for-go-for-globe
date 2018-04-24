@@ -90,7 +90,7 @@ $(".universe__zoom-button").click(function(){
 
 
 
-// ______________________ FOOTER - VIEW INSTRUCTIONS ______________________
+// ______________________  VIEW INSTRUCTIONS ______________________
 
 
 $(document).ready(function() {
