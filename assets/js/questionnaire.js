@@ -239,14 +239,13 @@ $('.bird-dies').on("click", function() {
     singleBird[0].endElement();
     singleBirdtwo[0].endElement();
     $('#town__bird-fall').css("animation"," 2s ease-in 0s alternate forwards bird-one");
-    $('#town__bird-wing-one').css("animation"," 17s ease-in 0s infinite paused bird-wingone");
+    $('#town__bird-wing-one').css("animation"," 3s ease-in 0s infinite paused bird-wingone");
+    $('#town__bird-wing-two').css("animation"," 3s ease-in 0s infinite paused bird-wingtwo");
     $('#town__bird').css("transform","rotate(180deg)");
     $('#town__bird').css("transform-origin","center");
     $('#town__bird').css("transform-box","fill-box");
 
     $('#town__bird-back-fall').css("animation"," 2s ease-in 0s alternate forwards bird-two");
-    $('#town__bird-back-wing-one').css("animation"," 3s ease-in 0s infinite paused bird-wingone");
-    $('#town__bird-back-wing-two').css("animation"," 3s ease-in 0s infinite paused bird-wingtwo");
     $('#town__bird-back').css("transform","rotate(180deg)");
     $('#town__bird-back').css("transform-origin","center");
     $('#town__bird-back').css("transform-box","fill-box");
